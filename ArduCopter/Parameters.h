@@ -87,7 +87,7 @@ public:
                                                 // change
         k_param_toy_yaw_rate,                   // deprecated - remove
         k_param_crosstrack_min_distance,	// deprecated - remove with next eeprom number change
-        k_param_rssi_pin,
+        k_param_rssi_pin,                   // unused, replaced by rssi_library parameters
         k_param_throttle_accel_enabled,     // deprecated - remove
         k_param_wp_yaw_behavior,
         k_param_acro_trainer,
@@ -102,7 +102,7 @@ public:
         k_param_battery,
         k_param_fs_batt_mah,
         k_param_angle_rate_max,         // remove
-        k_param_rssi_range,
+        k_param_rssi_range,             // unused, replaced by rssi_library parameters
         k_param_rc_feel_rp,
         k_param_NavEKF,                 // Extended Kalman Filter Inertial Navigation Group
         k_param_mission,                // mission library
@@ -159,6 +159,11 @@ public:
         // 90: Motors
         //
         k_param_motors = 90,
+
+        //
+        // 97: RSSI
+        //
+        k_param_rssi = 97,
 
         //
         // 100: Inertial Nav

@@ -502,6 +502,12 @@ const AP_Param::Info var_info[] PROGMEM = {
     GSCALAR(heli_stab_col_max, "H_STAB_COL_MAX", HELI_STAB_COLLECTIVE_MAX_DEFAULT),
 #endif
 
+    // RSSI
+    // @Group: RSSI_
+    // @Path: ../libraries/AP_RSSI/AP_RSSI.cpp
+    GOBJECT(rssi, "RSSI_",  AP_RSSI),   
+
+
     // RC channel
     //-----------
     // @Group: RC1_

@@ -757,6 +757,17 @@ void DataFlash_Class::Log_Write_RCOUT(void)
     WriteBlock(&pkt, sizeof(pkt));
 }
 
+// Write an RSSI packet
+void DataFlash_Class::Log_Write_RSSI(AP_RSSI &rssi)
+{
+    struct log_RSSI pkt = {
+        LOG_PACKET_HEADER_INIT(LOG_RSSI_MSG),
+        time_us       : AP_HAL::micros64(),
+        RXRSSI        : rssi.read_receiver_rssi()
+    };
+    WriteBlock(&pkt, sizeof(pkt));
+}
+
 // Write a BARO packet
 void DataFlash_Class::Log_Write_Baro(AP_Baro &baro)
 {

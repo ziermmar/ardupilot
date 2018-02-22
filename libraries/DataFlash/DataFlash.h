@@ -10,6 +10,7 @@
 #include <AP_Param.h>
 #include <AP_GPS.h>
 #include <AP_InertialSensor.h>
+#include <AP_RSSI.h>
 #include <AP_Baro.h>
 #include <AP_AHRS.h>
 #include <stdint.h>
